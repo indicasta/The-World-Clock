@@ -5,10 +5,24 @@
     #a6c1ee 51%,
     #fbc2eb 100%
   );
+  --footer-text-color: linear-gradient(
+    to right,
+    #e117a8 0%,
+    #1348a3 51%,
+    #f554c7 100%
+  );
 }
+
+.container {
+  max-width: 800px;
+  margin: 30px auto;
+  background-color: black;
+}
+h1,
 .text-properties {
-  background-image: var(--background-text-color);
+  background-image: var(--footer-text-color);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-align: center;
 }
