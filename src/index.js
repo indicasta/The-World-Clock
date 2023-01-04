@@ -1,3 +1,4 @@
+let currentLocation = moment.tz.guess();
 let cityFlags = {
   Paris: ["🇫🇷", "Europe/Paris"],
   LA: ["🇺🇸", "America/Los_Angeles"],
@@ -7,6 +8,7 @@ let cityFlags = {
   London: ["🇬🇧", "Europe/London"],
   Tokyo: ["🇯🇵", "Asia/Tokyo"],
   NewYork: ["🇺🇸", "America/New_York"],
+  CurrentLocation: ["📍", `${currentLocation}`],
 };
 let globalIndex = 0;
 function updateMainCity(event) {
@@ -14,6 +16,7 @@ function updateMainCity(event) {
   let cities = Object.keys(cityFlags);
   if (city === "New York") city = "NewYork";
   else if (city === "Los Angeles") city = "LA";
+  else if (city === "Current Location") city = "CurrentLocation";
   if (cities.indexOf(city) !== -1) globalIndex = cities.indexOf(city);
   else globalIndex = 0;
   updateTime();
@@ -24,7 +27,9 @@ function populateSelect() {
   cities.forEach((city) => {
     if (city === "LA") cityName = "Los Angeles";
     else if (city === "NewYork") cityName = "New York";
-    else {
+    else if (city === "CurrentLocation") {
+      cityName = "Current Location";
+    } else {
       cityName = city;
     }
     selectHTML += `<option value=${city}>${cityName}</option>`;
@@ -44,7 +49,9 @@ function updateTime() {
     }
     if (city === "LA") cityName = "Los Angeles";
     else if (city === "NewYork") cityName = "New York";
-    else {
+    else if (city === "CurrentLocation") {
+      cityName = "Current Location";
+    } else {
       cityName = city;
     }
     let cityTime = moment().tz(`${cityFlags[city][1]}`);
