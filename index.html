@@ -14,14 +14,18 @@
     <title>The World🌎Clock🕛</title>
   </head>
   <body>
-    <div class="container">
-      <div class="card text-bg-dark wrapper">
+    <div
+      class="container d-flex flex-column h-100 w-100 align-items-center flex-grow-1 flex-shrink-1"
+    >
+      <div class="card text-bg-dark">
         <img
           src="images/pexels-john-2922718.jpg"
-          class="card-img opacity-25"
+          class="card-img opacity-25 border-0"
           alt="Clocks"
         />
-        <div class="card-img-overlay">
+        <div
+          class="card-img-overlay d-flex flex-column h-100 w-100 align-items-center flex-grow-1 flex-shrink-1"
+        >
           <h1>The World Clock — Worldwide</h1>
           <select name="city" id="cities"></select>
           <div id="info"></div>

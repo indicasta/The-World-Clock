@@ -1,6 +1,6 @@
 let currentLocation = moment.tz.guess();
 let cityFlags = {
-  Paris: ["🇫🇷", "Europe/Paris"],
+  CurrentLocation: ["📍", `${currentLocation}`],
   LA: ["🇺🇸", "America/Los_Angeles"],
   Sydney: ["🇦🇺", "Australia/Sydney"],
   Barcelona: ["🇪🇸", "Europe/Madrid"],
@@ -8,7 +8,7 @@ let cityFlags = {
   London: ["🇬🇧", "Europe/London"],
   Tokyo: ["🇯🇵", "Asia/Tokyo"],
   NewYork: ["🇺🇸", "America/New_York"],
-  CurrentLocation: ["📍", `${currentLocation}`],
+  Paris: ["🇫🇷", "Europe/Paris"],
 };
 let globalIndex = 0;
 function updateMainCity(event) {
