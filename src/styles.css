@@ -9,7 +9,7 @@
 
 @media (max-width: 500px) {
   .card-img {
-    min-height: 350px;
+    min-height: 200px;
   }
   .container {
     overflow: auto;
