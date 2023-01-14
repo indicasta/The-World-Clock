@@ -1,20 +1,3 @@
-@media (max-width: 768px) {
-  .card-img {
-    min-height: 500px;
-  }
-  .container {
-    overflow: hidden;
-  }
-}
-
-@media (max-width: 500px) {
-  .card-img {
-    min-height: 200px;
-  }
-  .container {
-    overflow: auto;
-  }
-}
 :root {
   --background-text-color: linear-gradient(
     to right,
@@ -29,9 +12,40 @@
     #f554c7 100%
   );
 }
-
+@media (max-width: 768px) {
+  .container {
+    max-width: 100% !important;
+    margin-top: 0px !important;
+  }
+  h1 {
+    font-size: 20px !important;
+    margin-bottom: 10px !important;
+  }
+  h2 {
+    font-size: 12px !important;
+  }
+  select {
+    font-size: 10px !important;
+    padding: 5px !important;
+  }
+  .date {
+    font-size: 10px !important;
+  }
+  .time {
+    font-size: 16px !important;
+  }
+  .time small {
+    font-size: 10px !important;
+    line-height: 24px !important;
+  }
+  .city {
+    padding: 8px 5px !important;
+  }
+}
 h1 {
   font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
 }
 h1,
 .text-properties {
@@ -59,25 +73,22 @@ select {
 }
 
 .container {
-  max-width: 800px;
-  margin: 30px auto;
-  background-color: #191c1f;
-  background: #191c1f;
+  max-width: 600px;
+  background-color: #000;
+  background: #000;
   padding: 30px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 10px;
-  display: flex;
-  flex: 1;
 }
 #cities {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .city {
   display: flex;
-  margin: 10px 0;
+  margin: 5px 10px;
   justify-content: space-between;
-  padding: 30px 0;
+  padding: 30px 10px;
   border-bottom: 2px dashed rgba(255, 255, 255, 0.2);
 }
 
@@ -90,14 +101,16 @@ select {
 }
 
 .time {
-  font-size: 48px;
+  font-size: 44px;
   font-weight: bold;
   display: flex;
   align-items: flex-end;
+  padding-right: 10px;
 }
 
 .time small {
   font-size: 24px;
   vertical-align: middle;
-  line-height: 48px;
+  line-height: 60px;
+  margin-right: 10px;
 }
