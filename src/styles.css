@@ -12,7 +12,7 @@
     #f554c7 100%
   );
 }
-@media (max-width: 768px) {
+@media (max-width: 912px) {
   .container {
     max-width: 100% !important;
     margin-top: 0px !important;
